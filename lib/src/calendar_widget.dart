@@ -435,6 +435,11 @@ class _CustomCalendarViewerState extends State<CustomCalendarViewer>
   }
 
   @override
+  void didUpdateWidget(CustomCalendarViewer oldWidget) {
+    ranges = widget.ranges ?? [];
+  }
+
+  @override
   void dispose() {
     showOverlay = false;
     if (overlayEntry != null) {
